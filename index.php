@@ -6,7 +6,7 @@
 	$user->db['host'] = "localhost";
 	$user->db['user'] = "ptejada";
 	$user->db['pass'] = "mspress#1";
-	$user->db['name'] = "uflex";
+	$user->db['name'] = "uflex_demo";
 	
 	$user->start();
 	
@@ -27,3 +27,11 @@
 	print_r($user->console);
 	print_r($_SESSION);
 ?>
+=========================================================================
+<?php
+	$newUser = clone $user;
+
+	$newUser->login("pablo", 123);
+
+	print_r($newUser->console);
+	print_r($_SESSION);
